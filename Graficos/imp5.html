@@ -1,0 +1,90 @@
+<html>
+<body style="margin: 0; padding: 0; display: block;">
+<div id="3dmolviewer_17496630473984962"  style="position: relative; width: 400px; height: 400px;">
+        <p id="3dmolwarning_17496630473984962" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17496630473984962 = null;
+var warn = document.getElementById("3dmolwarning_17496630473984962");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17496630473984962 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17496630473984962"),{backgroundColor:"white"});
+viewer_17496630473984962.zoomTo();
+	viewer_17496630473984962.addModel("39\n\nC  5.506397 -0.718963  1.024367\nO  4.884640 -0.689779 -0.253267\nC  3.542804 -0.403534 -0.193477\nC  3.113502  0.895785 -0.157585\nC  4.041746  2.072882 -0.184381\nC  1.706893  1.143617 -0.106597\nC  0.932716  2.288207 -0.054613\nC -0.423658  1.860003 -0.022073\nN -1.654282  2.331886  0.032310\nC -2.447670  1.206100  0.032570\nC -3.839886  1.121318  0.078629\nC -4.441065 -0.132898  0.070405\nC -3.678160 -1.315623  0.016891\nC -2.288148 -1.260077 -0.030387\nC -1.693521 -0.007525 -0.022236\nN -0.394572  0.467379 -0.057709\nN  0.878177  0.019195 -0.105712\nC  1.307755 -1.272787 -0.167092\nC  2.643930 -1.526139 -0.206359\nC  3.185192 -2.924579 -0.299317\nO -5.805805 -0.126819  0.117641\nC -6.468613 -1.367591  0.111507\nH  5.456354  0.264169  1.507198\nH  5.029661 -1.459476  1.678056\nH  6.548453 -0.994306  0.858551\nH  5.061298  1.754318 -0.405889\nH  3.723442  2.784773 -0.953295\nH  4.031928  2.603918  0.774523\nH  1.289752  3.304278 -0.034782\nH -4.452342  2.014402  0.120418\nH -4.160709 -2.284559  0.011640\nH -1.713941 -2.179361 -0.070939\nH  0.541007 -2.036597 -0.184066\nH  2.371642 -3.651777 -0.356176\nH  3.816121 -3.036745 -1.185340\nH  3.802919 -3.175885  0.569116\nH -6.254398 -1.934842 -0.803231\nH -6.193937 -1.975933  0.982667\nH -7.534473 -1.141976  0.152816","xyz");
+	viewer_17496630473984962.setStyle({"stick": {"radius": 0.1}, "sphere": {"radius": 0.4}});
+	viewer_17496630473984962.setBackgroundColor("white");
+	viewer_17496630473984962.addLabel("1",{"position": {"x": 5.506397, "y": -0.718963, "z": 1.024367}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("2",{"position": {"x": 4.88464, "y": -0.689779, "z": -0.253267}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("3",{"position": {"x": 3.542804, "y": -0.403534, "z": -0.193477}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("4",{"position": {"x": 3.113502, "y": 0.895785, "z": -0.157585}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("5",{"position": {"x": 4.041746, "y": 2.072882, "z": -0.184381}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("6",{"position": {"x": 1.706893, "y": 1.143617, "z": -0.106597}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("7",{"position": {"x": 0.932716, "y": 2.288207, "z": -0.054613}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("8",{"position": {"x": -0.423658, "y": 1.860003, "z": -0.022073}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("9",{"position": {"x": -1.654282, "y": 2.331886, "z": 0.03231}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("10",{"position": {"x": -2.44767, "y": 1.2061, "z": 0.03257}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("11",{"position": {"x": -3.839886, "y": 1.121318, "z": 0.078629}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("12",{"position": {"x": -4.441065, "y": -0.132898, "z": 0.070405}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("13",{"position": {"x": -3.67816, "y": -1.315623, "z": 0.016891}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("14",{"position": {"x": -2.288148, "y": -1.260077, "z": -0.030387}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("15",{"position": {"x": -1.693521, "y": -0.007525, "z": -0.022236}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("16",{"position": {"x": -0.394572, "y": 0.467379, "z": -0.057709}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("17",{"position": {"x": 0.878177, "y": 0.019195, "z": -0.105712}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("18",{"position": {"x": 1.307755, "y": -1.272787, "z": -0.167092}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("19",{"position": {"x": 2.64393, "y": -1.526139, "z": -0.206359}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("20",{"position": {"x": 3.185192, "y": -2.924579, "z": -0.299317}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("21",{"position": {"x": -5.805805, "y": -0.126819, "z": 0.117641}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("22",{"position": {"x": -6.468613, "y": -1.367591, "z": 0.111507}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("23",{"position": {"x": 5.456354, "y": 0.264169, "z": 1.507198}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("24",{"position": {"x": 5.029661, "y": -1.459476, "z": 1.678056}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("25",{"position": {"x": 6.548453, "y": -0.994306, "z": 0.858551}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("26",{"position": {"x": 5.061298, "y": 1.754318, "z": -0.405889}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("27",{"position": {"x": 3.723442, "y": 2.784773, "z": -0.953295}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("28",{"position": {"x": 4.031928, "y": 2.603918, "z": 0.774523}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("29",{"position": {"x": 1.289752, "y": 3.304278, "z": -0.034782}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("30",{"position": {"x": -4.452342, "y": 2.014402, "z": 0.120418}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("31",{"position": {"x": -4.160709, "y": -2.284559, "z": 0.01164}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("32",{"position": {"x": -1.713941, "y": -2.179361, "z": -0.070939}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("33",{"position": {"x": 0.541007, "y": -2.036597, "z": -0.184066}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("34",{"position": {"x": 2.371642, "y": -3.651777, "z": -0.356176}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("35",{"position": {"x": 3.816121, "y": -3.036745, "z": -1.18534}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("36",{"position": {"x": 3.802919, "y": -3.175885, "z": 0.569116}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("37",{"position": {"x": -6.254398, "y": -1.934842, "z": -0.803231}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("38",{"position": {"x": -6.193937, "y": -1.975933, "z": 0.982667}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.addLabel("39",{"position": {"x": -7.534473, "y": -1.141976, "z": 0.152816}, "font": {"size": 25, "bold": true}, "inFront": true, "showBackground": false, "borderColor": "transparent", "alignment": "center", "fontColor": "black"});
+	viewer_17496630473984962.zoomTo();
+viewer_17496630473984962.render();
+});
+</script>
+</body>
+</html>
